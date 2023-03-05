@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import { NoEncryption } from "@mui/icons-material";
+import { fetchData } from "../utils/fetchData";
 
 function SearchExercises() {
+  const [search, setSearch] = useState("");
+  const handleSearch = async () => {
+    if (search) {
+      const exercisesData = await fetchData();
+    }
+  };
+
   return (
     <Stack alignItems="center" mt="37px" justifyContent="center" p="20px">
       <Typography
@@ -29,8 +37,8 @@ function SearchExercises() {
             borderRadius: "76px",
           }}
           height="76px"
-          value=""
-          onChange={(e) => {}}
+          value={search}
+          onChange={(e) => setSearch(e.target.value.toLoverCase())}
           placeholder="Search Exercises"
           type="text"
         />
@@ -46,6 +54,7 @@ function SearchExercises() {
             position: "absolute",
             right: "0",
           }}
+          onClick={handleSearch}
         >
           Search
         </Button>
