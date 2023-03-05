@@ -24,7 +24,7 @@ function SearchExercises() {
               border: "none",
               borderRadius: "4px",
             },
-            width: { lg: "1170px", xs: "350px" },
+            width: { lg: "800px", xs: "350px" },
             backgroundColor: "#fff",
             borderRadius: "76px",
           }}
@@ -34,7 +34,21 @@ function SearchExercises() {
           placeholder="Search Exercises"
           type="text"
         />
-        <Button className="search-btn">Search</Button>
+        <Button
+          className="search-btn"
+          sx={{
+            bgcolor: "#FF2625",
+            color: "#fff",
+            textTransform: "none",
+            width: { lg: "175px", xs: "80px" },
+            fontSize: { lg: "20px", xs: "14px" },
+            height: "56px",
+            position: "absolute",
+            right: "0",
+          }}
+        >
+          Search
+        </Button>
       </Box>
     </Stack>
   );
