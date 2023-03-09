@@ -6,6 +6,7 @@ import EquipmentImage from "../assets/icons/equipment.png";
 
 const Detail = ({ exerciseDetail }) => {
   const { bodyPart, gifUrl, name, target, equipment } = exerciseDetail;
+  const extraDetail = [];
 
   return (
     <Stack
@@ -13,6 +14,19 @@ const Detail = ({ exerciseDetail }) => {
       sx={{ flexDirection: { lg: "row" }, p: "20px", alignItems: "center" }}
     >
       <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
+      <Stack sx={{ gap: { lg: "35px", xs: "20px" } }}>
+        <Typography variant="h3">{name}</Typography>
+        <Typography
+          variant="h6"
+          sx={{ fontSize: { lg: "24px", xs: "18px" } }}
+          color="#4F4C4C"
+        >
+          Exercises keep you strong.{" "}
+          <span style={{ textTransform: "capitalize" }}>{name}</span> bup is one
+          of the best exercises to target your {target}. It will help you
+          improve your mood and gain energy.
+        </Typography>
+      </Stack>
     </Stack>
   );
 };
