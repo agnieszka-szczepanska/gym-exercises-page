@@ -52,3 +52,5 @@ function HorizontalScrollbar({ data, bodyPart, setBodyPart, isBodyParts }) {
 }
 
 export default HorizontalScrollbar;
+
+// CHECK ARROW's
