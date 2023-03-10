@@ -33,6 +33,11 @@ const ExerciseDetail = () => {
         `${exerciseDbUrl}/exercises/target/${exerciseDetailData.target}`,
         exerciseOptions
       );
+
+      const equipmentMuscleExercisesData = await fetchData(
+        `${exerciseDbUrl}/exercises/equipment/${exerciseDetailData.equipment}`,
+        exerciseOptions
+      );
     };
     fetchExercisesData();
   }, [id]);
