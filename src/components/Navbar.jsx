@@ -40,12 +40,12 @@ const Navbar = () => {
         >
           Home
         </Link>
-        <a
+        {/* <a
           href="#exercises"
           style={{ textDecoration: "none", color: "#3A1212" }}
         >
           Exercises
-        </a>
+        </a> */}
       </Stack>
     </Stack>
   );
